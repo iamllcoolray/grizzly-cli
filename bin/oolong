@@ -1,0 +1,112 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature qw(say);
+
+use FindBin qw($Bin);
+use lib "$Bin/../lib";
+
+use Oolong;
+use Oolong::Quote;
+use Getopt::Long;
+use Pod::Usage;
+
+my $help    = 0;
+my $version = '';
+my $quote;
+GetOptions(
+	"q|quote:s" => \$quote,
+	"h|help"    => \$help,
+	"v|version" => \$version,
+) or die("Run: oolong --help");
+
+if ($help) {
+	pod2usage(1);
+}
+
+if ($version) {
+	say("Oolong - version $Oolong::VERSION");
+}
+
+if ( defined $quote ) {
+	say($quote) if $quote;
+	unless ( length $quote ) {
+		die("Run: oolong --quote [stock symbol]");
+	}
+}
+
+__END__
+
+=head1 NAME
+ 
+B<Oolong> - A command-line interface for looking up stock quote.
+ 
+=head1 SYNOPSIS
+ 
+B<oolong> [options]
+
+ Options:
+   -q | --quote [stock symbol]   prints out stock quote
+   -h | --help                   prints out help message
+   -v | --version                prints out version number
+ 
+=head1 OPTIONS
+ 
+=over 8
+
+=item B<-q | --quote>
+ 
+Prints out the stock quote of a given symbol.
+ 
+=item B<-h | --help>
+ 
+Prints out a help message on how to use Oolong.
+
+=item B<-v | --version>
+ 
+Prints out Oolong's version number.
+ 
+=back
+ 
+=head1 DESCRIPTION
+ 
+B<Oolong> will output the stock qoute of the given symbol.
+
+=head1 BUGS
+
+=head1 CONTRIBUTING
+
+=head1 AUTHOR
+
+Rayhan Alcena
+
+=head1 COPYRIGHT
+
+Copyright (C) 2020, Rayhan Alcena
+
+=head1 LICENSE
+
+MIT License
+
+Copyright (c) 2020 Rayhan Alcena
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+=cut

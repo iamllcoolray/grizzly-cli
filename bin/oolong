@@ -3,14 +3,13 @@
 use strict;
 use warnings;
 use feature qw(say);
+use Getopt::Long;
+use Pod::Usage;
 
 use FindBin qw($Bin);
 use lib "$Bin/../lib";
 
 use Oolong;
-use Oolong::Quote;
-use Getopt::Long;
-use Pod::Usage;
 
 my $help    = 0;
 my $version = '';

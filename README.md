@@ -28,7 +28,7 @@ Displays a help message on how to use Oolong.
 
 -v | --version
 
-Displays a Oolong's version number.
+Displays Oolong's version number.
 
 ## DESCRIPTION
 

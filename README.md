@@ -20,15 +20,15 @@ Options:
 
 -q | --quote
 
-Prints out the stock quote of a given symbol.
+Displays the stock quote of a given symbol.
 
 -h | --help
 
-Prints out a help message on how to use Oolong.
+Displays a help message on how to use Oolong.
 
 -v | --version
 
-Prints out Oolong's version number.
+Displays a Oolong's version number.
 
 ## DESCRIPTION
 

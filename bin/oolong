@@ -6,16 +6,15 @@ use feature qw(say);
 use Getopt::Long;
 use Pod::Usage;
 
-use FindBin qw($Bin);
-use lib "$Bin/../lib";
-
+use FindBin;
+use lib "$FindBin::Bin/../lib";
 use Oolong;
 
 my $help    = 0;
 my $version = '';
-my $quote;
+my $symbol;
 GetOptions(
-	"q|quote:s" => \$quote,
+	"q|quote:s" => \$symbol,
 	"h|help"    => \$help,
 	"v|version" => \$version,
 ) or die("Run: oolong --help");
@@ -28,9 +27,13 @@ if ($version) {
 	say("Oolong - version $Oolong::VERSION");
 }
 
-if ( defined $quote ) {
-	say($quote) if $quote;
-	unless ( length $quote ) {
+if ( defined $symbol ) {
+
+	#say($symbol) if $symbol;
+	my $quote = Oolong->new({symbol => $symbol});
+	$quote->symbol_o;
+
+	unless ( length $symbol) {
 		die("Run: oolong --quote [stock symbol]");
 	}
 }

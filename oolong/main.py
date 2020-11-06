@@ -1,4 +1,5 @@
 from core.version import get_version
+from data.stockdata import Quote
 import argparse
 
 VERSION = get_version()
@@ -9,4 +10,6 @@ parser.add_argument('-v', '--version', action='version', help='Displays Oolong\'
 parser.add_argument('-q', '--quote', action='store', help='Displays the stock quote of a given symbol', type=str)
 
 args = parser.parse_args()
-print(args.quote)
+
+quote_info = Quote(args.quote)
+quote_info.stock_symbol()

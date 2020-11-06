@@ -11,5 +11,6 @@ parser.add_argument('-q', '--quote', action='store', help='Displays the stock qu
 
 args = parser.parse_args()
 
-quote_info = Quote(args.quote)
-quote_info.stock_symbol()
+if (args.quote):
+    quote_info = Quote(args.quote)
+    quote_info.stock_symbol()

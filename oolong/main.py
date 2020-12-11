@@ -13,4 +13,4 @@ args = parser.parse_args()
 
 if (args.quote):
     quote_info = Quote(args.quote)
-    quote_info.stock_symbol()
+    quote_info.stock_data()

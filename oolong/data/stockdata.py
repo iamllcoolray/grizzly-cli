@@ -1,4 +1,3 @@
-import json
 import requests
 
 class Quote:
@@ -6,4 +5,6 @@ class Quote:
         self.symbol = symbol
 
     def stock_symbol(self):
-        print(self.symbol)
+        url = requests.get("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + self.symbol)
+        data = url.json()
+        print(data)

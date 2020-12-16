@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import HTTPError
 
 class Quote:
     def __init__(self, symbol):

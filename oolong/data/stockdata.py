@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 from requests.exceptions import HTTPError
 
 class Quote:
@@ -6,13 +7,12 @@ class Quote:
         self.symbol = symbol
 
     def stock_data(self):
-        url = requests.get("https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + self.symbol)
-        data = url.json()
-
         try:
-            jsonResponse = data
-            print("Entire JSON response")
-            print(jsonResponse["quoteResponse"]["result"][0])
+            url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=" + self.symbol
+            r = requests.get(url)
+            json_data = r.json()
+            df = pd.DataFrame(json_data['quoteResponse']['result'])
+            print(df)
 
         except HTTPError as http_err:
             print(f'HTTP error occurred: {http_err}')

@@ -14,8 +14,9 @@ class Quote:
             json_data = r.json()
 
             df = pd.DataFrame(json_data['quoteResponse']['result'])
-            df_renamed = df.rename(columns={"symbol": "Symbol", "displayName": "Company Name", "regularMarketPrice": "Price", "regularMarketOpen": "Open", "regularMarketDayLow": "Low", "regularMarketDayHigh": "High", "regularMarketPreviousClose": "Previous Close", "fiftyTwoWeekLow": "52 Week Low", "fiftyTwoWeekHigh": "52 Week High"})
-            selections = df_renamed[['Symbol', 'Company Name', 'Price', 'Open', 'Low', 'High', 'Previous Close', '52 Week Low', '52 Week High']]
+            df_renamed = df.rename(columns={"symbol": "Symbol", "longName": "Company", "regularMarketPrice": "Price", "regularMarketOpen": "Open", "regularMarketDayLow": "Low", "regularMarketDayHigh": "High", "regularMarketPreviousClose": "Previous Close", "fiftyTwoWeekLow": "52 Week Low", "fiftyTwoWeekHigh": "52 Week High"})
+            columns = ['Symbol', 'Company', 'Price', 'Open', 'Low', 'High', 'Previous Close', '52 Week Low', '52 Week High']
+            selections = df_renamed[columns]
             table = tabulate(selections, showindex=False, headers=selections.columns, tablefmt="fancy_grid")
             print(table)
 

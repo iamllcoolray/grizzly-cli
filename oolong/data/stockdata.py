@@ -12,7 +12,9 @@ class Quote:
             r = requests.get(url)
             json_data = r.json()
             df = pd.DataFrame(json_data['quoteResponse']['result'])
-            print(df)
+            df_rename = df.rename(columns={"symbol": "Symbol", "displayName": "Company Name"})
+            selections = df_rename[['Symbol', 'Company Name']]
+            print(selections)
 
         except HTTPError as http_err:
             print(f'HTTP error occurred: {http_err}')

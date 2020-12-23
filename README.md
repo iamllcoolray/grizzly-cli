@@ -4,6 +4,10 @@
 
 Oolong - A command-line interface for looking up stock quote.
 
+## DESCRIPTION
+
+Oolong will output the stock qoute of the given symbol.
+
 ## SYNOPSIS
 
 oolong [options]
@@ -16,7 +20,7 @@ Options:
 
 -v | --version
 
-## OPTIONS
+### OPTIONS
 
 -q | --quote
 
@@ -29,10 +33,6 @@ Displays a help message on how to use Oolong.
 -v | --version
 
 Displays Oolong's version number.
-
-## DESCRIPTION
-
-Oolong will output the stock qoute of the given symbol.
 
 ## BUGS
 

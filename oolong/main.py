@@ -1,5 +1,5 @@
 from core.version import get_version
-from data.stockdata import Quote
+from display.table import Display
 import argparse
 
 VERSION = get_version()
@@ -12,5 +12,5 @@ parser.add_argument('-q', '--quote', action='store', help='displays the stock qu
 args = parser.parse_args()
 
 if (args.quote):
-    quote_info = Quote(args.quote)
-    quote_info.stock_data()
+    quote_info = Display(args.quote)
+    quote_info.display_table()

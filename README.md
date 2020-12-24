@@ -10,6 +10,8 @@ Oolong will output the stock qoute of the given symbol.
 
 ## SYNOPSIS
 
+```bash
+
 oolong [options]
 
 Options:
@@ -19,6 +21,8 @@ Options:
 -h | --help
 
 -v | --version
+
+```
 
 ### OPTIONS
 

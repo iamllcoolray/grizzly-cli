@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(prog="grizzly", description="Grizzly is a comma
 
 parser.add_argument('-v', '--version', action='version', help='displays %(prog)s\'s version number', version='%(prog)s - version '+VERSION)
 parser.add_argument('-q', '--quote', action='store', help='displays the stock quote of a given symbol', type=str, nargs='?', metavar='symbol')
-parser.add_argument('-n', '--news', action='store', help='displays the stock quote of a given symbol', nargs='?', metavar='symbol')
+parser.add_argument('-n', '--news', action='store', help='displays the stock news in browser of a given symbol', nargs='?', metavar='symbol')
 
 args = parser.parse_args()
 

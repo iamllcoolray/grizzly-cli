@@ -18,6 +18,8 @@ Options:
 
 -q | --quote [stock symbol]
 
+-n | --news [stock symbol]
+
 -h | --help
 
 -v | --version
@@ -29,6 +31,10 @@ Options:
 -q | --quote
 
 Displays the stock quote of a given symbol.
+
+-n | --news
+
+Displays the stock news in browser of a given symbol.
 
 -h | --help
 

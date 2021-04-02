@@ -1,18 +1,18 @@
-# Oolong
+# Grizzly
 
 ## NAME
 
-Oolong - A command-line interface for looking up stock quote.
+Grizzly - A command-line interface for looking up stock quote.
 
 ## DESCRIPTION
 
-Oolong will output the stock qoute of the given symbol.
+Grizzly will output the stock quote of the given symbol.
 
 ## SYNOPSIS
 
 ```bash
 
-oolong [options]
+grizzly [options]
 
 Options:
 
@@ -32,11 +32,11 @@ Displays the stock quote of a given symbol.
 
 -h | --help
 
-Displays a help message on how to use Oolong.
+Displays a help message on how to use Grizzly.
 
 -v | --version
 
-Displays Oolong's version number.
+Displays Grizzly's version number.
 
 ## BUGS
 

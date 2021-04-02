@@ -4,9 +4,9 @@ import argparse
 
 VERSION = get_version()
 
-parser = argparse.ArgumentParser(prog="oolong", description="Oolong is a command-line application that will output the stock qoute of the given symbol")
+parser = argparse.ArgumentParser(prog="grizzly", description="Grizzly is a command-line application that will output the stock qoute of the given symbol")
 
-parser.add_argument('-v', '--version', action='version', help='displays Oolong\'s version number', version='Oolong - version '+VERSION)
+parser.add_argument('-v', '--version', action='version', help='displays Grizzly\'s version number', version='Grizzly - version '+VERSION)
 parser.add_argument('-q', '--quote', action='store', help='displays the stock quote of a given symbol', type=str, nargs='?', metavar='symbol')
 
 args = parser.parse_args()

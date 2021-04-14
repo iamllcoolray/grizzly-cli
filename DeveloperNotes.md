@@ -2,7 +2,7 @@
 
 ## Features
 
-- [ ] Get stock quote for specific ticker symbol
+- [x] Get stock quote for specific ticker symbol
 
 - [ ] Get Latest News Headlines for specific ticker symbol
 

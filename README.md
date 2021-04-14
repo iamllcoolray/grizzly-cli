@@ -16,31 +16,31 @@ grizzly [options]
 
 Options:
 
--q | --quote [stock symbol]
+quote [stock symbol]
 
--n | --news [stock symbol]
+news [stock symbol]
 
--h | --help
+help
 
--v | --version
+version
 
 ```
 
 ### OPTIONS
 
--q | --quote
+quote
 
 Displays the stock quote of a given symbol.
 
--n | --news
+news
 
 Displays the stock news in browser of a given symbol.
 
--h | --help
+help
 
 Displays a help message on how to use Grizzly.
 
--v | --version
+version
 
 Displays Grizzly's version number.
 

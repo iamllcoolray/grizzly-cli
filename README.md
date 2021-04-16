@@ -20,6 +20,8 @@ quote [stock symbol]
 
 news [stock symbol]
 
+algorithm [stock symbol]
+
 help
 
 version
@@ -35,6 +37,10 @@ Displays the stock quote of a given symbol.
 news
 
 Displays the stock news in browser of a given symbol.
+
+algorithm
+
+Runs a stock trading algorithm.
 
 help
 

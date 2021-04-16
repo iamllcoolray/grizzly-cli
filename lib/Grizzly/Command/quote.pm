@@ -19,21 +19,27 @@ sub validate_args {
 sub execute {
   my ($self, $opt, $args) = @_;
 
-  my %quote = $q->yahoo_json(@$args);
+  quote_info(@$args);
+}
 
-  my $name = $quote {@$args, "name"};
-  my $date = $quote {@$args, "date"};
-  my $last_price = $quote {@$args, "last"};
-  my $open = $quote {@$args, "open"};
-  my $high = $quote {@$args, "high"};
-  my $low = $quote {@$args, "low"};
-  my $close = $quote {@$args, "close"};
-  my $div_yield = $quote {@$args, "div_yield"};
-  my $pe = $quote {@$args, "pe"};
-  my $eps = $quote {@$args, "eps"};
+sub quote_info {
+  my ($symbol) = @_;
+
+  my %quote = $q->yahoo_json($symbol);
+
+  my $name = $quote {$symbol, "name"};
+  my $date = $quote {$symbol, "date"};
+  my $last_price = $quote {$symbol, "last"};
+  my $open = $quote {$symbol, "open"};
+  my $high = $quote {$symbol, "high"};
+  my $low = $quote {$symbol, "low"};
+  my $close = $quote {$symbol, "close"};
+  my $div_yield = $quote {$symbol, "div_yield"};
+  my $pe = $quote {$symbol, "pe"};
+  my $eps = $quote {$symbol, "eps"};
 
   unless ($name) {
-    $name = @$args;
+    $name = $symbol;
   }
   unless ($date) {
     $date = 'n/a';
@@ -63,27 +69,19 @@ sub execute {
     $eps = 'n/a';
   }
 
+print <<EOF,
+Company: ========== $name
+Date: ============= $date
+Latest Price: ===== $last_price
+Open: ============= $open
+High: ============= $high
+Low: ============== $low
+Previous Close: === $close
+Dividend Yield: === $div_yield
+P/E Ratio: ======== $pe
+EPS: ============== $eps
 
-  print "Company: ", $name,
-  "\n",
-  "Date: ", $date,
-  "\n",
-  "Latest Price: ", $last_price,
-  "\n",
-  "Open: ", $open,
-  "\n",
-  "High: ", $high,
-  "\n",
-  "Low: ", $low,
-  "\n",
-  "Previous Close: ", $close,
-  "\n",
-  "Dividend Yield: ", $div_yield,
-  "\n",
-  "P/E Ratio: ", $pe,
-  "\n",
-  "EPS: ", $eps,
-  "\n";
+EOF
 }
 
 1;

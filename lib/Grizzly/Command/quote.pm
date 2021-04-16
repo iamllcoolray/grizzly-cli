@@ -70,6 +70,9 @@ sub quote_info {
   }
 
 print <<EOF,
+
+Grizzly - Stock Quote Analysis
+
 Company: ========== $name
 Date: ============= $date
 Latest Price: ===== $last_price

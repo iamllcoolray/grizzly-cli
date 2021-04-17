@@ -37,9 +37,7 @@ sub quote_info {
           $is_power = 1 if 2**$i == $_;
       }
 
-      if ($is_power) {
-          $progress->update($_);
-      }
+      $progress->update($_);
   }
 
   Term::Clear::clear();

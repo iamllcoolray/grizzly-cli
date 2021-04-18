@@ -6,11 +6,12 @@ use Term::Clear ();
 use Term::ProgressBar 2.00;
 use constant MAX => 100_000;
 
-my $max = MAX;
-my $progress = Term::ProgressBar->new({name => 'Grizzly', count => $max, remove => 1});
-
 sub progressbar {
-  my ($self) = shift;
+  my ($self) = @_;
+  
+  my $max = MAX;
+  my $progress = Term::ProgressBar->new({name => 'Grizzly', count => $max, remove => 1, silent => 0,});
+
   $progress->minor(0);
   my $next_update = 0;
 

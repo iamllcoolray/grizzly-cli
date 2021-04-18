@@ -7,7 +7,7 @@ use Term::ProgressBar 2.00;
 use constant MAX => 100_000;
 
 my $max = MAX;
-my $progress = Term::ProgressBar->new({name => 'Powers', count => $max, remove => 1});
+my $progress = Term::ProgressBar->new({name => 'Grizzly', count => $max, remove => 1});
 
 sub progressbar {
   my ($self) = shift;

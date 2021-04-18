@@ -4,12 +4,9 @@ use strict;
 use warnings;
 
 use Finance::Quote;
-use Term::Clear ();
-use Term::ProgressBar 2.00;
-use constant MAX => 100_000;
+use Grizzly::Progress::Bar;
 
 my $q = Finance::Quote->new("YahooJSON");
-my $progress = Term::ProgressBar->new(MAX);
 
 sub abstract { "display stock quote" }
 
@@ -31,16 +28,7 @@ sub quote_info {
 
   my %quote = $q->yahoo_json($symbol);
 
-  for (0..MAX) {
-      my $is_power = 0;
-      for (my $i = 0; 2**$i <= $_; $i++) {
-          $is_power = 1 if 2**$i == $_;
-      }
-
-      $progress->update($_);
-  }
-
-  Term::Clear::clear();
+  Grizzly::Progress::Bar->progressbar();
 
   my $name = $quote {$symbol, "name"};
   my $date = $quote {$symbol, "date"};

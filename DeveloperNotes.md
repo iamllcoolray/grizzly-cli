@@ -13,3 +13,5 @@
 - [App::Cmd](https://metacpan.org/pod/App::Cmd)
 
 - [Finance::Quote](https://metacpan.org/pod/Finance::Quote)
+
+- [Term::ProgressBar](https://metacpan.org/pod/Term::ProgressBar)

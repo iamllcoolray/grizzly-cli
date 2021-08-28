@@ -38,6 +38,20 @@ version
 
 Displays Grizzly's version number.
 
+## Installation
+
+```bash
+
+cpanm Grizzly
+
+or
+
+perl Makefile.PL
+make
+make install
+
+```
+
 ## BUGS
 
 ## CONTRIBUTING

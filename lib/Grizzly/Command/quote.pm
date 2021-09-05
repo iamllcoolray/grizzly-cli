@@ -91,3 +91,27 @@ EOF
 }
 
 1;
+
+=encoding utf8
+
+=head1 NAME
+
+Grizzly::Command::quote
+
+=head1 DESCRIPTION
+
+Grizzly will output the stock quote of the inputted tickers symbol.
+
+=head1 SYNOPSIS
+
+    grizzly quote [stock symbol]
+
+=head1 AUTHOR
+
+Nobunaga <nobunaga@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2021 by Nobunaga.
+
+MIT License

@@ -46,9 +46,9 @@ cpanm Grizzly
 
 ```
 
-## BUGS
+### API Key(s)
 
-## CONTRIBUTING
+You will need to get a free API key from [NewsAPI]("https://newsapi.org/"). Afterwards you will need to set the NEWS_API_KEY variable to the API key.
 
 ## AUTHOR
 

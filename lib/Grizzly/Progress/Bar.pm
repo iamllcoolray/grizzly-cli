@@ -30,3 +30,23 @@ sub progressbar {
 }
 
 1;
+
+=encoding utf8
+
+=head1 NAME
+
+Grizzly::Progress::Bar
+
+=head1 DESCRIPTION
+
+Outputs a progress bar so the user can visually see Grizzly gather the stock information.
+
+=head1 AUTHOR
+
+Nobunaga <nobunaga@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2021 by Nobunaga.
+
+MIT License

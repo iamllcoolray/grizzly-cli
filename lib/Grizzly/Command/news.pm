@@ -77,7 +77,7 @@ The news feture will output stock in formation on the inputted ticker symbol.
 
 =head1 API Key
 
-You will need to get a free API key from L<NewsAPI|https://newsapi.org/>. Afterwards you will need to set the NEWS_API_KEY variable to the API key.
+You will need to get a free API key from L<NewsAPI|https://newsapi.org/>. Afterwards you will need to set the NEWS_API_KEY environment variable to the API key.
 
 =head1 AUTHOR
 

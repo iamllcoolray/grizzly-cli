@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+
+# PODNAME: grizzly
+
 use strict;
 use warnings;
 

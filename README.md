@@ -1,63 +1,51 @@
-# Grizzly
-
-## NAME
+# NAME
 
 Grizzly - A command-line interface for looking up stock quote.
 
-## DESCRIPTION
+# DESCRIPTION
 
 Grizzly will output the stock quote of the given symbol.
 
-## SYNOPSIS
+# SYNOPSIS
 
-```bash
+    grizzly [options]
 
-grizzly [options]
+    Options:
 
-Options:
+    news [stock symbol]
 
-quote [stock symbol]
+    quote [stock symbol]
 
-help
+    help
 
-version
+    version
 
-```
+## Options
 
-### OPTIONS
+news - Displays the stock news of a given symbol.
 
-quote
+quote - Displays the stock quote of a given symbol.
 
-Displays the stock quote of a given symbol.
+help - Displays a help message on how to use Grizzly.
 
-help
+version - Displays Grizzly's version number.
 
-Displays a help message on how to use Grizzly.
-
-version
-
-Displays Grizzly's version number.
+# Setup
 
 ## Installation
 
-```bash
+    cpanm Grizzly
 
-cpanm Grizzly
+## API Key
 
-```
+You will need to get a free API key from [NewsAPI](https://newsapi.org/). Afterwards you will need to set the NEWS\_API\_KEY environment variable to the API key.
 
-### API Key(s)
+# AUTHOR
 
-You will need to get a free API key from [NewsAPI]("https://newsapi.org/"). Afterwards you will need to set the NEWS_API_KEY environment variable to the API key.
+Nobunaga <nobunaga@cpan.org>
 
-## AUTHOR
+# COPYRIGHT AND LICENSE
 
-Nobunaga
-
-## COPYRIGHT
-
-Copyright (C) 2021, Nobunaga
-
-## LICENSE
+This software is copyright (c) 2021 by Nobunaga.
 
 MIT License

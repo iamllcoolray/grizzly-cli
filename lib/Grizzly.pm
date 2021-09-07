@@ -43,7 +43,13 @@ help - Displays a help message on how to use Grizzly.
 
 version - Displays Grizzly's version number.
 
-=head1 API Key
+=head1 Setup
+
+=head2 Installation
+
+    cpanm Grizzly
+
+=head2 API Key
 
 You will need to get a free API key from L<NewsAPI|https://newsapi.org/>. Afterwards you will need to set the NEWS_API_KEY environment variable to the API key.
 

@@ -2,6 +2,7 @@ package Grizzly::Command::news;
 use Grizzly -command;
 use strict;
 use warnings;
+use Carp;
 use open ':std', ':encoding(UTF-8)';
 
 use Finance::Quote;
@@ -36,7 +37,7 @@ sub execute {
 
     my $name = $quote {$symbol, "name"};
 
-    my $api_key = $ENV{'NEWS_API_KEY'};
+    my $api_key = $ENV{'NEWS_API_KEY'} or croak "You need to set an API key to NEWS_API_KEY environment variable";
 
     my $newsapi = Web::NewsAPI->new(
     api_key => $api_key,

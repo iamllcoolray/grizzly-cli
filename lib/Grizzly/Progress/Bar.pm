@@ -1,4 +1,6 @@
 package Grizzly::Progress::Bar;
+# ABSTRACT: Runs a progress bar when called
+
 use strict;
 use warnings;
 

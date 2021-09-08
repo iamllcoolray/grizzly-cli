@@ -1,6 +1,7 @@
 v0.102 2021.09.07
 
     Added error handling for a missing NewsAPI key
+    Added ABSTRACT comments to the applictions libraries
 
 
 v0.102 2021.09.07

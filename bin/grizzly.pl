@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-
-# PODNAME: grizzly
+# ABSTRACT: Grizzly application script
+# PODNAME: Grizzly
 
 use strict;
 use warnings;

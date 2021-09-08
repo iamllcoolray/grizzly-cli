@@ -7,6 +7,7 @@ use warnings;
 
 use Finance::Quote;
 use Grizzly::Progress::Bar;
+use Term::ANSIColor;
 
 my $q = Finance::Quote->new("YahooJSON");
 
@@ -74,9 +75,11 @@ sub quote_info {
     $eps = 'n/a';
   }
 
+my $title = colored("Grizzly - Stock Quote Analysis", "blue");
+
 print <<EOF,
 
-Grizzly - Stock Quote Analysis
+$title
 
 Company: ========== $name
 Date: ============= $date

@@ -1,4 +1,5 @@
 package Grizzly::Command::news;
+
 # ABSTRACT: Gets the stock news for the given symbol
 
 use Grizzly -command;
@@ -19,17 +20,17 @@ sub abstract { "display stock news" }
 sub description { "Display the any news on the stock." }
 
 sub validate_args {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
     $self->usage_error("Need a symbol args") unless @$args;
 }
 
 sub execute {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     quote_info(@$args);
-    }
+}
 
-    sub quote_info {
+sub quote_info {
     my ($symbol) = @_;
 
     my $article_number = 1;
@@ -38,29 +39,32 @@ sub execute {
 
     Grizzly::Progress::Bar->progressbar();
 
-    my $name = $quote {$symbol, "name"};
+    my $name = $quote{ $symbol, "name" };
 
-    my $api_key = $ENV{'NEWS_API_KEY'} or croak "You need to set an API key to NEWS_API_KEY environment variable";
+    my $api_key = $ENV{'NEWS_API_KEY'}
+      or croak
+      "You need to set an API key to NEWS_API_KEY environment variable";
 
-    my $newsapi = Web::NewsAPI->new(
-    api_key => $api_key,
-    );
+    my $newsapi = Web::NewsAPI->new( api_key => $api_key, );
 
     unless ($name) {
-    $name = $symbol;
+        $name = $symbol;
     }
 
-    print colored("Here are the top ten headlines worldwide for ", "blue") . colored("$name...\n", "white");
+    print colored( "Here are the top ten headlines worldwide for ", "blue" )
+      . colored( "$name...\n", "white" );
     print "\n";
     my $stock_news = $newsapi->everything( q => $name, pageSize => 10 );
     for my $article ( $stock_news->articles ) {
-        print colored("$article_number: \n", "magenta") . $article->title . "\n";
-        print colored("Link: ", "cyan") . $article->url . "\n";
-        print colored("Description: ", "cyan") . $article->description . "\n";
+        print colored( "$article_number: \n", "magenta" )
+          . $article->title . "\n";
+        print colored( "Link: ",        "cyan" ) . $article->url . "\n";
+        print colored( "Description: ", "cyan" ) . $article->description . "\n";
         print "\n";
         $article_number += 1;
     }
-    print colored("The total number of $name articles returned: ", "blue") . colored($stock_news->total_results . "\n", "white");
+    print colored( "The total number of $name articles returned: ", "blue" )
+      . colored( $stock_news->total_results . "\n", "white" );
 }
 
 1;

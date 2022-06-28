@@ -1,4 +1,5 @@
 package Grizzly::Progress::Bar;
+
 # ABSTRACT: Runs a progress bar when called
 
 use strict;
@@ -9,25 +10,26 @@ use Term::ProgressBar 2.00;
 use constant MAX => 100_000;
 
 sub progressbar {
-  my ($self) = @_;
-  
-  my $max = MAX;
-  my $progress = Term::ProgressBar->new({name => 'Grizzly', count => $max, remove => 1, silent => 0,});
+    my ($self) = @_;
 
-  $progress->minor(0);
-  my $next_update = 0;
+    my $max      = MAX;
+    my $progress = Term::ProgressBar->new(
+        { name => 'Grizzly', count => $max, remove => 1, silent => 0, } );
 
-  for (0..$max) {
-      my $is_power = 0;
-      for (my $i = 0; 2**$i <= $_; $i++) {
-          $is_power = 1 if 2**$i == $_;
-      }
+    $progress->minor(0);
+    my $next_update = 0;
 
-      $next_update = $progress->update($_) if $_ >= $next_update;
-  }
-  $progress->update($max) if $max >= $next_update;
+    for ( 0 .. $max ) {
+        my $is_power = 0;
+        for ( my $i = 0 ; 2**$i <= $_ ; $i++ ) {
+            $is_power = 1 if 2**$i == $_;
+        }
 
-  Term::Clear::clear();
+        $next_update = $progress->update($_) if $_ >= $next_update;
+    }
+    $progress->update($max) if $max >= $next_update;
+
+    Term::Clear::clear();
 
 }
 

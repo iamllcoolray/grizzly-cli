@@ -1,4 +1,5 @@
 package Grizzly::Command::quote;
+
 # ABSTRACT: Gets a stock quote for the given symbol
 
 use Grizzly -command;
@@ -16,68 +17,68 @@ sub abstract { "display stock quote" }
 sub description { "Display the stock quote information." }
 
 sub validate_args {
-  my ($self, $opt, $args) = @_;
-  $self->usage_error("Need a symbol args") unless @$args;
+    my ( $self, $opt, $args ) = @_;
+    $self->usage_error("Need a symbol args") unless @$args;
 }
 
 sub execute {
-  my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
-  quote_info(@$args);
+    quote_info(@$args);
 }
 
 sub quote_info {
-  my ($symbol) = @_;
+    my ($symbol) = @_;
 
-  my %quote = $q->yahoo_json($symbol);
+    my %quote = $q->yahoo_json($symbol);
 
-  Grizzly::Progress::Bar->progressbar();
+    Grizzly::Progress::Bar->progressbar();
 
-  my $name = $quote {$symbol, "name"};
-  my $date = $quote {$symbol, "date"};
-  my $last_price = $quote {$symbol, "last"};
-  my $open = $quote {$symbol, "open"};
-  my $high = $quote {$symbol, "high"};
-  my $low = $quote {$symbol, "low"};
-  my $close = $quote {$symbol, "close"};
-  my $div_yield = $quote {$symbol, "div_yield"};
-  my $pe = $quote {$symbol, "pe"};
-  my $eps = $quote {$symbol, "eps"};
+    my $name       = $quote{ $symbol, "name" };
+    my $date       = $quote{ $symbol, "date" };
+    my $last_price = $quote{ $symbol, "last" };
+    my $open       = $quote{ $symbol, "open" };
+    my $high       = $quote{ $symbol, "high" };
+    my $low        = $quote{ $symbol, "low" };
+    my $close      = $quote{ $symbol, "close" };
+    my $div_yield  = $quote{ $symbol, "div_yield" };
+    my $pe         = $quote{ $symbol, "pe" };
+    my $eps        = $quote{ $symbol, "eps" };
 
-  unless ($name) {
-    $name = $symbol;
-  }
-  unless ($date) {
-    $date = 'n/a';
-  }
-  unless ($last_price) {
-    $last_price = 'n/a';
-  }
-  unless ($open) {
-    $open = 'n/a';
-  }
-  unless ($high) {
-    $high = 'n/a';
-  }
-  unless ($low) {
-    $low = 'n/a';
-  }
-  unless ($close) {
-    $close = 'n/a';
-  }
-  unless ($div_yield) {
-    $div_yield = 'n/a';
-  }
-  unless ($pe) {
-    $pe = 'n/a';
-  }
-  unless ($eps) {
-    $eps = 'n/a';
-  }
+    unless ($name) {
+        $name = $symbol;
+    }
+    unless ($date) {
+        $date = 'n/a';
+    }
+    unless ($last_price) {
+        $last_price = 'n/a';
+    }
+    unless ($open) {
+        $open = 'n/a';
+    }
+    unless ($high) {
+        $high = 'n/a';
+    }
+    unless ($low) {
+        $low = 'n/a';
+    }
+    unless ($close) {
+        $close = 'n/a';
+    }
+    unless ($div_yield) {
+        $div_yield = 'n/a';
+    }
+    unless ($pe) {
+        $pe = 'n/a';
+    }
+    unless ($eps) {
+        $eps = 'n/a';
+    }
 
-my $title = colored("Grizzly - Stock Quote Analysis", "blue");
+    my $title = colored( "Grizzly - Stock Quote Analysis", "blue" );
 
-print <<EOF,
+    print <<EOF,;
 
 $title
 

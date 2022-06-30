@@ -15,6 +15,8 @@ use Term::ANSIColor;
 
 my $q = Finance::Quote->new("YahooJSON");
 
+sub command_names { qw(news --news -n) }
+
 sub abstract { "display stock news" }
 
 sub description { "Display the any news on the stock." }

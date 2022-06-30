@@ -34,47 +34,16 @@ sub quote_info {
 
     Grizzly::Progress::Bar->progressbar();
 
-    my $name       = $quote{ $symbol, "name" };
-    my $date       = $quote{ $symbol, "date" };
-    my $last_price = $quote{ $symbol, "last" };
-    my $open       = $quote{ $symbol, "open" };
-    my $high       = $quote{ $symbol, "high" };
-    my $low        = $quote{ $symbol, "low" };
-    my $close      = $quote{ $symbol, "close" };
-    my $div_yield  = $quote{ $symbol, "div_yield" };
-    my $pe         = $quote{ $symbol, "pe" };
-    my $eps        = $quote{ $symbol, "eps" };
-
-    unless ($name) {
-        $name = $symbol;
-    }
-    unless ($date) {
-        $date = 'n/a';
-    }
-    unless ($last_price) {
-        $last_price = 'n/a';
-    }
-    unless ($open) {
-        $open = 'n/a';
-    }
-    unless ($high) {
-        $high = 'n/a';
-    }
-    unless ($low) {
-        $low = 'n/a';
-    }
-    unless ($close) {
-        $close = 'n/a';
-    }
-    unless ($div_yield) {
-        $div_yield = 'n/a';
-    }
-    unless ($pe) {
-        $pe = 'n/a';
-    }
-    unless ($eps) {
-        $eps = 'n/a';
-    }
+    my $name       = $quote{ $symbol, "name" }      || 'n/a';
+    my $date       = $quote{ $symbol, "date" }      || 'n/a';
+    my $last_price = $quote{ $symbol, "last" }      || 'n/a';
+    my $open       = $quote{ $symbol, "open" }      || 'n/a';
+    my $high       = $quote{ $symbol, "high" }      || 'n/a';
+    my $low        = $quote{ $symbol, "low" }       || 'n/a';
+    my $close      = $quote{ $symbol, "close" }     || 'n/a';
+    my $div_yield  = $quote{ $symbol, "div_yield" } || 'n/a';
+    my $pe         = $quote{ $symbol, "pe" }        || 'n/a';
+    my $eps        = $quote{ $symbol, "eps" }       || 'n/a';
 
     my $title = colored( "Grizzly - Stock Quote Analysis", "blue" );
 

@@ -60,7 +60,7 @@ Nobunaga <nobunaga@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2021 by Nobunaga.
+This software is copyright (c) 2022 by Nobunaga.
 
 MIT License
  

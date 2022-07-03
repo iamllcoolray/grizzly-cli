@@ -5,15 +5,8 @@ package Grizzly::Command::news;
 use Grizzly -command;
 use strict;
 use warnings;
-use Carp;
-use open ':std', ':encoding(UTF-8)';
 
-use Finance::Quote;
-use Web::NewsAPI;
-use Grizzly::Progress::Bar;
-use Term::ANSIColor;
-
-my $q = Finance::Quote->new("YahooJSON");
+use Grizzly::Data::Article qw(news_info);
 
 sub command_names { qw(news --news -n) }
 
@@ -29,44 +22,7 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $args ) = @_;
 
-    quote_info(@$args);
-}
-
-sub quote_info {
-    my ($symbol) = @_;
-
-    my $article_number = 1;
-
-    my %quote = $q->yahoo_json($symbol);
-
-    Grizzly::Progress::Bar->progressbar();
-
-    my $name = $quote{ $symbol, "name" };
-
-    my $api_key = $ENV{'NEWS_API_KEY'}
-      or croak
-      "You need to set an API key to NEWS_API_KEY environment variable";
-
-    my $newsapi = Web::NewsAPI->new( api_key => $api_key, );
-
-    unless ($name) {
-        $name = $symbol;
-    }
-
-    print colored( "Here are the top ten headlines worldwide for ", "blue" )
-      . colored( "$name...\n", "white" );
-    print "\n";
-    my $stock_news = $newsapi->everything( q => $name, pageSize => 10 );
-    for my $article ( $stock_news->articles ) {
-        print colored( "$article_number: \n", "magenta" )
-          . $article->title . "\n";
-        print colored( "Link: ",        "cyan" ) . $article->url . "\n";
-        print colored( "Description: ", "cyan" ) . $article->description . "\n";
-        print "\n";
-        $article_number += 1;
-    }
-    print colored( "The total number of $name articles returned: ", "blue" )
-      . colored( $stock_news->total_results . "\n", "white" );
+    news_info(@$args);
 }
 
 1;

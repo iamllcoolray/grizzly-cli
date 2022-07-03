@@ -4,10 +4,16 @@ package Grizzly::Progress::Bar;
 
 use strict;
 use warnings;
+use parent qw(Exporter);
 
 use Term::Clear ();
 use Term::ProgressBar 2.00;
 use constant MAX => 100_000;
+
+require Exporter;
+our @ISA = ("Exporter");
+
+our @EXPORT = qw(progressbar);
 
 sub progressbar {
     my ($self) = @_;

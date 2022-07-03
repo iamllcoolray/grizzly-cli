@@ -2,8 +2,7 @@
 # ABSTRACT: Grizzly application script
 # PODNAME: Grizzly
 
-use strict;
-use warnings;
+use v5.36;
 
 use FindBin qw($Bin);
 use lib "$Bin/../lib";

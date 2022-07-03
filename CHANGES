@@ -1,40 +1,48 @@
-v0.105 2022.07.*
-    Created a MIT license file
-    Updated the installation section in both the README.md and the Grizzly.pm files
-    Updated the Synopsis section in both the README.md and the Grizzly.pm files
+0.110 2022.07.*
 
-v0.104 2022.04.13
-    Created an executable grizzly file
+    - Made the codebase modular
+    - Added testing for version number across the codebase
 
+0.104 2022.07.1
 
-v0.103 2021.09.22
+    - Created a MIT license file
+    - Updated the installation section in both the README.md and the Grizzly.pm files
+    - Updated the Synopsis section in both the README.md and the Grizzly.pm files
+    - Removed the [ReadmeFromPod] implementation from dist.ini
 
-    Added error handling for a missing NewsAPI key
-    Added ABSTRACT comments to the applictions libraries
-    Added Term:ANSIColor to the outputted text
+0.104 2022.04.13
 
-
-v0.102 2021.09.07
-
-    Added CHANGES file
-    Implemented more sections to dist.ini: [MetaJSON], [PodWeaver], [PerlTidy], [Repository], [ReadmeFromPod], [CheckChangeLog]
+    - Created an executable grizzly file
 
 
-v0.101 2021.09.05
+0.103 2021.09.22
 
-    Fixed dependency issues 
+    - Added error handling for a missing NewsAPI key
+    - Added ABSTRACT comments to the applictions libraries
+    - Added Term:ANSIColor to the outputted text
 
 
-v0.100 2021.09.05
+0.102 2021.09.07
+
+    - Added CHANGES file
+    - Implemented more sections to dist.ini: [MetaJSON], [PodWeaver], [PerlTidy], [Repository], [ReadmeFromPod], [CheckChangeLog]
+
+
+0.101 2021.09.05
+
+    F- ixed dependency issues 
+
+
+0.100 2021.09.05
 
     Added the news command feature
 
 
-v0.002 2021.09.01
+0.002 2021.09.01
 
-    Added documentation
+    - Added documentation
 
 
-v0.001 2021.08.28
+0.001 2021.08.28
 
-    Releasing the first version of application
+    - Releasing the first version of application

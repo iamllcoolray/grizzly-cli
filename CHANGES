@@ -8,7 +8,6 @@
     - Created a MIT license file
     - Updated the installation section in both the README.md and the Grizzly.pm files
     - Updated the Synopsis section in both the README.md and the Grizzly.pm files
-    - Removed the [ReadmeFromPod] implementation from dist.ini
 
 0.104 2022.04.13
 

@@ -2,8 +2,7 @@ package Grizzly::Data::StockInfo;
 
 # ABSTRACT: Gets and returns stock quote
 
-use strict;
-use warnings;
+use v5.36;
 use parent qw(Exporter);
 
 use Finance::Quote;

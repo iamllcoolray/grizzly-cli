@@ -3,8 +3,7 @@ package Grizzly::Command::news;
 # ABSTRACT: Gets the stock news for the given symbol
 
 use Grizzly -command;
-use strict;
-use warnings;
+use v5.36;
 
 use Grizzly::Data::Article qw(news_info);
 

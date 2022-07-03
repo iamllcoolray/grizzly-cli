@@ -2,8 +2,8 @@ package Grizzly::Data::Article;
 
 # ABSTRACT:
 
-use strict;
-use warnings;
+use v5.36;
+use feature qw(multidimensional);
 use Carp;
 use open ':std', ':encoding(UTF-8)';
 use parent qw(Exporter);

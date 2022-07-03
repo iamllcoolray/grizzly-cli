@@ -3,8 +3,7 @@ package Grizzly::Command::quote;
 # ABSTRACT: Gets a stock quote for the given symbol
 
 use Grizzly -command;
-use strict;
-use warnings;
+use v5.36;
 
 use Grizzly::Data::Finance qw(quote_info);
 

@@ -2,9 +2,9 @@ package Grizzly::Data::Finance;
 
 # ABSTRACT: Displays Finance::Quote data
 
-use strict;
-use warnings;
-use parent qw(Exporter);
+use v5.36;
+use feature qw(multidimensional);
+use parent  qw(Exporter);
 
 use Grizzly::Progress::Bar;
 use Grizzly::Data::StockInfo;

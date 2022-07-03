@@ -2,10 +2,9 @@ package Grizzly;
 
 # ABSTRACT: Grizzly - A command-line interface for looking up stock quote.
 
-our $VERSION = '0.110';
+our $VERSION = '0.111';
 
-use strict;
-use warnings;
+use v5.36;
 
 use App::Cmd::Setup -app;
 1;

@@ -1,12 +1,11 @@
 use Test::More tests => 3;
 
-use strict;
-use warnings;
+use v5.36;
 use Config::INI::Reader;
 
 use Grizzly;
 
-my $newest_version = '0.110';
+my $newest_version = '0.111';
 
 my $config_hash    = Config::INI::Reader->read_file('dist.ini');
 my $config_version = $config_hash->{_}->{version};

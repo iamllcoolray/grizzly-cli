@@ -48,7 +48,16 @@ version - Displays Grizzly's version number.
 
 =head2 Installation
 
+=head3 Through cpanm
+
     cpanm Grizzly
+
+=head3 Through the Project Directory
+
+    cpanm --installdeps .
+    perl Makefile.PL
+    make
+    make install
 
 =head2 API Key
 

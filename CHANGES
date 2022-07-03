@@ -1,5 +1,6 @@
-v0.104_1 2022.07.01
+v0.105 2022.07.*
     Created a MIT license file
+    Updated the installation section in both the README.md and the Grizzly.pm files
 
 v0.104 2022.04.13
     Created an executable grizzly file

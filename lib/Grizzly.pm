@@ -24,15 +24,12 @@ Grizzly will output the stock quote of the given symbol.
 
     grizzly [options]
 
-    Options:
+        Options:
 
-    news [stock symbol]
-
-    quote [stock symbol]
-
-    help
-
-    version
+            news [stock symbol]
+            quote [stock symbol]
+            help
+            version
 
 =head2 Options
 

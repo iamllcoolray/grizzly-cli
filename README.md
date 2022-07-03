@@ -45,3 +45,13 @@ version - Displays Grizzly's version number.
 ## API Key
 
 You will need to get a free API key from [NewsAPI](https://newsapi.org/). Afterwards you will need to set the NEWS\_API\_KEY environment variable to the API key.
+
+# AUTHOR
+
+Nobunaga <nobunaga@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2022 by Nobunaga.
+
+MIT License

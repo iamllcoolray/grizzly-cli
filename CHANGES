@@ -1,6 +1,6 @@
 {{$NEXT}}
 
-    - Implemented new sections to dist.ini: [CheckIssues], [ConfirmRelease]
+    - Implemented new sections to dist.ini: [CheckIssues], [ConfirmRelease], [NextRelease]
     - Reworked the CHANGES version testing
     - Implemented done_testing() to t/ and xt/ tests
 

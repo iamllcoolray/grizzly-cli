@@ -1,3 +1,9 @@
+{{$NEXT}}
+
+    - Implemented new sections to dist.ini: [CheckIssues], [ConfirmRelease]
+    - Reworked the CHANGES version testing
+    - Implemented done_testing() to t/ and xt/ tests
+
 0.111 2022.07.03
 
     - Upgraded to v5.36

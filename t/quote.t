@@ -1,4 +1,4 @@
-use Test::More tests => 5;
+use Test::More;
 use App::Cmd::Tester;
 
 use v5.36;
@@ -14,3 +14,5 @@ my $result = test_app( Grizzly => [qw(quote)] );
 like( $result->stdout, qr//, 'printed what we expected' );
 is( $result->stderr, '', 'nothing sent to sderr' );
 isnt( $result->error, undef, 'threw no exceptions' );
+
+done_testing();

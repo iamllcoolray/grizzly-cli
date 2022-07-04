@@ -13,8 +13,7 @@ our @EXPORT = qw(stock_info);
 
 my $q = Finance::Quote->new("YahooJSON");
 
-sub stock_info {
-    my ($symbol) = @_;
+sub stock_info ($symbol) {
 
     return $q->yahoo_json($symbol);
 }

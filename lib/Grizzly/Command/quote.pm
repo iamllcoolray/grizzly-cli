@@ -13,13 +13,11 @@ sub abstract { "display stock quote" }
 
 sub description { "Display the stock quote information." }
 
-sub validate_args {
-    my ( $self, $opt, $args ) = @_;
+sub validate_args ( $self, $opt, $args ) {
     $self->usage_error("Need a symbol args") unless @$args;
 }
 
-sub execute {
-    my ( $self, $opt, $args ) = @_;
+sub execute ( $self, $opt, $args ) {
 
     quote_info(@$args);
 }

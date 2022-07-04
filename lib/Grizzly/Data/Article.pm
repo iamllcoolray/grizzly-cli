@@ -23,8 +23,7 @@ my $api_key = $ENV{'NEWS_API_KEY'}
 
 my $newsapi = Web::NewsAPI->new( api_key => $api_key, );
 
-sub news_info {
-    my ($symbol) = @_;
+sub news_info ($symbol) {
 
     my $article_number = 1;
 

@@ -15,7 +15,6 @@ our @ISA = ("Exporter");
 our @EXPORT = qw(progressbar);
 
 sub progressbar {
-    my ($self) = @_;
 
     my $max      = MAX;
     my $progress = Term::ProgressBar->new(

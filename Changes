@@ -1,8 +1,11 @@
+Revision history for {{$dist->name}}
+
 {{$NEXT}}
 
-    - Implemented new sections to dist.ini: [CheckIssues], [ConfirmRelease], [NextRelease]
-    - Reworked the CHANGES version testing
+    - Implemented new sections to dist.ini [CheckIssues], [ConfirmRelease], [NextRelease]
+    - Reworked the Changes version testing
     - Implemented done_testing() to t/ and xt/ tests
+    - Rewrote function signatures
 
 0.111 2022.07.03
 
@@ -35,7 +38,7 @@
 0.102 2021.09.07
 
     - Added CHANGES file
-    - Implemented more sections to dist.ini: [MetaJSON], [PodWeaver], [PerlTidy], [Repository], [ReadmeFromPod], [CheckChangeLog]
+    - Implemented more sections to dist.ini [MetaJSON], [PodWeaver], [PerlTidy], [Repository], [ReadmeFromPod], [CheckChangeLog]
 
 
 0.101 2021.09.05

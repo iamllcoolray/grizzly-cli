@@ -15,8 +15,7 @@ our @ISA         = ("Exporter");
 our @EXPORT_OK   = qw(quote_info);
 our %EXPORT_TAGS = ( all => [qw(quote_info)], );
 
-sub quote_info {
-    my ($symbol) = @_;
+sub quote_info ($symbol) {
 
     my %quote = stock_info($symbol);
 

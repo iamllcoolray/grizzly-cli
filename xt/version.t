@@ -22,11 +22,12 @@ foreach my $changes_arr (@changes_arr) {
     }
 }
 
-is( $Grizzly::VERSION, $newest_version, 'compares $Grizzly::VERSION == $newest_version' );
+is( $Grizzly::VERSION, $newest_version,
+    'checking if $Grizzly::VERSION is equal to $newest_version' );
 is( $config_version, $newest_version,
-    'compares $config_version == $newest_version' );
+    'checking if $config_version equal is to $newest_version' );
 is( $changes_version, $newest_version,
-    'compares $changes_version == $newset_versionc' );
+    'checking if $changes_version equal is to $newset_versionc' );
 
 close(FH);
 

@@ -26,10 +26,6 @@ sub execute ( $self, $opt, $args ) {
 
 =encoding utf8
 
-=head1 NAME
-
-Grizzly::Command::news
-
 =head1 DESCRIPTION
 
 The news feture will output stock in formation on the inputted ticker symbol.
@@ -41,13 +37,3 @@ The news feture will output stock in formation on the inputted ticker symbol.
 =head1 API Key
 
 You will need to get a free API key from L<NewsAPI|https://newsapi.org/>. Afterwards you will need to set the NEWS_API_KEY environment variable to the API key.
-
-=head1 AUTHOR
-
-Nobunaga <nobunaga@cpan.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2021 by Nobunaga.
-
-MIT License

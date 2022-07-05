@@ -6,6 +6,8 @@ Revision history for {{$dist->name}}
     - Reworked the Changes version testing
     - Implemented done_testing() to t/ and xt/ tests
     - Rewrote function signatures
+    - Fixed repeated documentation
+    - Made version test descriptions clearer
 
 0.111 2022.07.03
 

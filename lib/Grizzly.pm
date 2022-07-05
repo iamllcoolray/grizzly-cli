@@ -11,14 +11,6 @@ use App::Cmd::Setup -app;
 
 =encoding utf8
 
-=head1 NAME
-
-Grizzly - A command-line interface for looking up stock quote.
-
-=head1 DESCRIPTION
-
-Grizzly will output the stock quote of the given symbol.
-
 =head1 SYNOPSIS
 
     grizzly [options]
@@ -39,6 +31,10 @@ quote - Displays the stock quote of a given symbol.
 help - Displays a help message on how to use Grizzly.
 
 version - Displays Grizzly's version number.
+
+=head1 DESCRIPTION
+
+Grizzly will output the stock information for any given ticker symbol.
 
 =head1 Setup
 

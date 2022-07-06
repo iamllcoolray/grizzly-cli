@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
-    - Implemented new sections to dist.ini [CheckIssues], [ConfirmRelease], [NextRelease]
+    - Implemented new sections to dist.ini [CheckIssues], [ConfirmRelease], [NextRelease], [GitHub::UploadRelease]
     - Reworked the Changes version testing
     - Implemented done_testing() to t/ and xt/ tests
     - Rewrote function signatures
